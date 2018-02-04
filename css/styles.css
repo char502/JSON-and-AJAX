@@ -1,0 +1,9 @@
+.hide-me {
+    visability: hidden;
+    opacity: 0;
+    transform: scale(.75);
+}
+
+button {
+    transition: opacity .4s ease-out, transform .4s ease-out, visability .4s ease-out;
+}

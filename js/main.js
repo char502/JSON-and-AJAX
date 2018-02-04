@@ -12,14 +12,27 @@ btn.addEventListener("click", function() {
         renderHTML(ourData);
         };
     ourRequest.send();
+    pageCounter++;
+        if (pageCounter > 3) {
+            btn.classList.add("hide-me");
+        }
     });
 
     function renderHTML(data) {
         var htmlString = "";
 
         for (var i = 0; i<data.length; i++) {
-            //console.log(data[i]);
-           htmlString += "<p>" + data[i].name + " is a " + data[i].species + "."; 
+            htmlString += "<p>" + data[i].name + " is a " + data[i].species + " that likes to eat ";
+           
+            for (var ii = 0; ii < data[i].foods.likes.length; ii++) {
+                if (ii == 0) {
+                    htmlString += data[i].foods.likes[ii]; 
+                } else {
+                    htmlString += " and " + data[i].foods.likes[ii];
+                }
+            //
+           } 
+           htmlString += '.</p>';
         }
 
         animalContainer.insertAdjacentHTML('beforeend', htmlString);   
