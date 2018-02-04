@@ -1,10 +1,14 @@
 
-let ourRequest = new XMLHttpRequest();
+var btn = document.getElementById('btn');
 
-ourRequest.open('GET', 'https://learnwebcode.github.io/json-example/animals-1.json');
+btn.addEventListener('click', function() {
+    let ourRequest = new XMLHttpRequest();
 
-ourRequest.onload = function() {
-    let ourData = JSON.parse(ourRequest.responseText);
-    console.log(ourData[0].likes);
-};
-ourRequest.send();
+    ourRequest.open('GET', 'https://learnwebcode.github.io/json-example/animals-1.json');
+
+    ourRequest.onload = function () {
+        let ourData = JSON.parse(ourRequest.responseText);
+        console.log(ourData[0].likes);
+    };
+    ourRequest.send();
+});
