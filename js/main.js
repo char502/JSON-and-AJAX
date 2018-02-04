@@ -1,6 +1,3 @@
-
-window.onload = 
-
 let bttn = document.getElementById("btn");
 
 btn.addEventListener("click", function() {
