@@ -1,4 +1,4 @@
-const animalContainer = document.getElementById(animal-info);
+var animalContainer = document.getElementById('animal-info');
 var btn = document.getElementById("btn");
 
 btn.addEventListener("click", function() {
@@ -14,5 +14,6 @@ btn.addEventListener("click", function() {
     });
 
     function renderHTML(data) {
-        animalContainer.insertAdjacentHTML('beforeend', 'testing 123');   
+        var htmlString = "this is a test";
+        animalContainer.insertAdjacentHTML('beforeend', htmlString);   
     }
