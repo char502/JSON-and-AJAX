@@ -1,3 +1,5 @@
+window.onload = function() {
+
 let bttn = document.getElementById("btn");
 
 bttn.addEventListener("click", function() {
@@ -8,6 +10,7 @@ bttn.addEventListener("click", function() {
     ourRequest.onload = function () {
         let ourData = JSON.parse(ourRequest.responseText);
         console.log(ourData[0].likes);
-    };
+        };
     ourRequest.send();
-});
+    });
+};
