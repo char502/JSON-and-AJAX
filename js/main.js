@@ -1,7 +1,7 @@
 
 window.onload = 
 
-let btn = document.getElementById("btn");
+let bttn = document.getElementById("btn");
 
 btn.addEventListener("click", function() {
     let ourRequest = new XMLHttpRequest();
