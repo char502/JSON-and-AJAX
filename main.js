@@ -1,21 +1,10 @@
 
+let ourRequest = new XMLHttpRequest();
 
-const thePets = [
-    {
-        "name": "Meowsalot",
-        "species": "cat",
-        "favFood": "tuna"
-    }, 
-    {
-        "name": "Barky",
-        "species": "dog",
-        "favFood": "carrots"
-    }, 
-    {
-        "name": "Meowsalot",
-        "species": "cat",
-        "favFood": "tuna"
-    }
-]
+ourRequest.open('GET', 'https://learnwebcode.github.io/json-example/animals-1.json');
 
-console.log(thePets[1].species)
+ourRequest.onload = function() {
+    let ourData = JSON.parse(ourRequest.responseText);
+    console.log(ourData[0].likes);
+};
+ourRequest.send();
